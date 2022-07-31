@@ -7,7 +7,7 @@ import { Notification } from './Notification/Notification';
 
 export const App = () => {
   const [good, setGood] = useState(0);
-  const [neutral, setNutral] = useState(0);
+  const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
   const totalFeedback = () => {
@@ -15,7 +15,7 @@ export const App = () => {
   };
 
   const positiveFeedbackPercentage = () => {
-    return Math.round((this.state.good * 100) / this.totalFeedback());
+    return Math.round((good * 100) / totalFeedback());
   };
 
   const handlerBtn = e => {
@@ -25,7 +25,7 @@ export const App = () => {
         setGood(ps => ps + 1);
         break;
       case 'neutral':
-        setNutral(ps => ps + 1);
+        setNeutral(ps => ps + 1);
         break;
       case 'bad':
         setBad(ps => ps + 1);
